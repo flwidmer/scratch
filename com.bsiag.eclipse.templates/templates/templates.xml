@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<templates>
+	<template autoinsert="true" context="java" deleted="false"
+		description="field by class" enabled="true" name="fbc"
+		id="com.bsiag.scout.sdk.templates.fbc">public ${fieldClass} get${fieldClass}() {
+		return getFieldByClass(${fieldClass}.class);
+		}
+	</template>
+	<template autoinsert="true" context="java" deleted="false"
+		description="column by class" enabled="true" name="cbc"
+		id="com.bsiag.scout.sdk.templates.cbc">public ${columnClass} get${columnClass}() {
+		return getTable().getColumnByClass(${columnClass}.class)
+		}
+	</template>
+	<template autoinsert="true" context="java" deleted="false"
+		description="return getText" enabled="true" name="rgt"
+		id="com.bsiag.scout.sdk.templates.rgt">
+		return TEXTS.getText(${cursor});
+	</template>
+	<template autoinsert="true" context="java" deleted="false"
+		description="getText" enabled="true" name="gt"
+		id="com.bsiag.scout.sdk.templates.gt">
+		TEXTS.getText(${cursor})
+	</template>
+	<template autoinsert="true" context="java" deleted="false"
+		description="return true" enabled="true" name="rt"
+		id="com.bsiag.scout.sdk.templates.rt">
+		return true;
+	</template>
+	<template autoinsert="true" context="java" deleted="false"
+		description="return false" enabled="true" name="rf"
+		id="com.bsiag.scout.sdk.templates.rgt">
+		return false;
+	</template>
+	<template autoinsert="true" context="java" deleted="false"
+		description="@Order" enabled="true" name="ord"
+		id="com.bsiag.scout.sdk.templates.ord">
+		@Order(${order}.0)
+		${cursor}
+	</template>
+</templates>
