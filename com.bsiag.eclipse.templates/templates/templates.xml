@@ -29,7 +29,7 @@
 	</template>
 	<template autoinsert="true" context="java" deleted="false"
 		description="return false" enabled="true" name="rf"
-		id="com.bsiag.scout.sdk.templates.rgt">
+		id="com.bsiag.scout.sdk.templates.rf">
 		return false;
 	</template>
 	<template autoinsert="true" context="java" deleted="false"
