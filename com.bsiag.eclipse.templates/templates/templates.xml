@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <templates>
+	<!-- Scout Elements -->
 	<template autoinsert="true" context="java" deleted="false"
 		description="field by class" enabled="true" name="fbc"
 		id="com.bsiag.scout.sdk.templates.fbc">public ${fieldClass} get${fieldClass}() {
@@ -13,6 +14,13 @@
 		}
 	</template>
 	<template autoinsert="true" context="java" deleted="false"
+		description="@Order" enabled="true" name="ord"
+		id="com.bsiag.scout.sdk.templates.ord">
+		@Order(${order}.0)
+		${cursor}
+	</template>
+	<!-- Text -->
+	<template autoinsert="true" context="java" deleted="false"
 		description="return getText" enabled="true" name="rgt"
 		id="com.bsiag.scout.sdk.templates.rgt">
 		return TEXTS.getText(${cursor});
@@ -22,6 +30,31 @@
 		id="com.bsiag.scout.sdk.templates.gt">
 		TEXTS.getText(${cursor})
 	</template>
+	<!-- Services -->
+	<template autoinsert="true" context="java" deleted="false" 
+	description="SERVICES.getService" enabled="true" name="ser">
+		SERVICES.getService(I${}Service.class);${cursor}
+	</template>
+	<template autoinsert="true" context="java" deleted="false" 
+	description="SQL.select" enabled="true" name="ss">
+		SQL.select(sql&#13;
+		  ,new NVPair("${}", )&#13;
+		);${cursor}
+	</template>
+	<!-- Customization -->
+	<template autoinsert="true" context="java" deleted="false" 
+	description="begin cutomize" enabled="true" name="cu">
+		// &lt;customized&gt;&#13;
+		// ${date} ${time}, ${user}: ${}&#13;
+		// &lt;/customized&gt;&#13;
+		${cursor}
+	</template>
+	<template autoinsert="true" context="java" deleted="false" 
+	description="Mig interim comment" enabled="true" name="mic">
+		// &lt;mig_interim_comment&gt; Commented out for the moment only. TODO&#13;
+		// &lt;/mig_interim_comment&gt;&#13;
+	</template>
+	<!-- Utility -->
 	<template autoinsert="true" context="java" deleted="false"
 		description="return true" enabled="true" name="rt"
 		id="com.bsiag.scout.sdk.templates.rt">
@@ -31,11 +64,5 @@
 		description="return false" enabled="true" name="rf"
 		id="com.bsiag.scout.sdk.templates.rf">
 		return false;
-	</template>
-	<template autoinsert="true" context="java" deleted="false"
-		description="@Order" enabled="true" name="ord"
-		id="com.bsiag.scout.sdk.templates.ord">
-		@Order(${order}.0)
-		${cursor}
 	</template>
 </templates>
